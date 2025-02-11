@@ -1,3 +1,4 @@
+"use server";
 import { prisma } from "../lib/db";
 import styles from "./page.module.css";
 import Link from "next/link";
