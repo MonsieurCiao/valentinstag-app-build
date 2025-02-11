@@ -10,6 +10,7 @@ export async function createPost(formData: FormData) {
       number: +num,
     }
   })
+  revalidatePath('/display');
   revalidatePath('/eingabe');
 }
 
@@ -20,7 +21,8 @@ export async function deletePost(formData: FormData) {
       where: { id },
     });
 
-    revalidatePath('/');  
+    revalidatePath('/display');
+    revalidatePath('/eingabe');
   }catch(error){
     console.error("DELETE ERROR: ", error);
   }
