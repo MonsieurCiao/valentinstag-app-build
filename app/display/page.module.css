@@ -11,12 +11,6 @@
 .h1{
   font-size: 100px;
 }
-.heartContainer{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, calc(100vh/4));
-
-}
 .homeButton{
   padding: .5rem 1rem;
   font-size: 15px;
@@ -34,8 +28,6 @@
   100%{font-size: 50}
 }
 .heart{
-  height: 100%;
-  width: 100%;
   animation: heart linear infinite 3s 
 }
 .number{

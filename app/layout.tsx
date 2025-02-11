@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Love_Light } from "next/font/google";
+import { Inter, Love_Light, Allura } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +11,11 @@ const inter = Inter({
 const loveLight = Love_Light({
   weight: "400",
   variable: "--love-light",
+  subsets: [],
+});
+const allura = Allura({
+  weight: "400",
+  variable: "--allura",
   subsets: [],
 });
 
@@ -26,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${loveLight.className} ${inter.variable} antialiased`}>
+      <body
+        className={`${allura.className} ${loveLight.className} ${inter.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

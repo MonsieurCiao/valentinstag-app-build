@@ -31,17 +31,25 @@ async function page() {
             <img
               src={"/heartPink.svg"}
               alt={"heart"}
+              width={(6 / cols) * 140}
               className={styles.heart}
             />
-            <div className={styles.number}>{post.number}</div>
+            <div
+              className={styles.number}
+              style={{
+                fontSize: `${(6 / cols) * 50}px`,
+              }}
+            >
+              {post.number}
+            </div>
           </div>
         ))}
       </div>
-      <div className={styles.footer}>
+      {/* <div className={styles.footer}>
         <Link href={"/"} className={styles.homeButton}>
           Home
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -10,9 +10,9 @@
 
 .mainButtonContainer{
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: clamp(1rem, 2vw, 50rem);
 }
 .displayButton{
   padding: 20px 40px;
