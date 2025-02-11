@@ -14,10 +14,14 @@ export async function createPost(formData: FormData) {
 }
 
 export async function deletePost(formData: FormData) {
-  const id = formData.get("id") as string;
-  await prisma.post.delete({
-    where: { id },
-  });
+  try{
+    const id = formData.get("id") as string;
+    await prisma.post.delete({
+      where: { id },
+    });
 
-  revalidatePath('/');
+    revalidatePath('/');  
+  }catch(error){
+    console.error("DELETE ERROR: ", error);
+  }
 }
