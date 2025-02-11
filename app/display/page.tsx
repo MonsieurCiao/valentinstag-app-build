@@ -1,7 +1,6 @@
-import { prisma } from "../lib/db";
-import React, { createRef } from "react";
-import styles from "./page.module.css";
 import Image from "next/image";
+import { prisma } from "../lib/db";
+import styles from "./page.module.css";
 import Link from "next/link";
 
 async function page() {
@@ -30,7 +29,7 @@ async function page() {
             }}
           >
             <img
-              src={"/heartPink.svg"}
+              src={"../img/heartPink.svg"}
               alt={"heart"}
               className={styles.heart}
             />
