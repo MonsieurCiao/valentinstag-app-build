@@ -31,7 +31,7 @@ async function page() {
             <img
               src={"/heartPink.svg"}
               alt={"heart"}
-              width={(6 / cols) * 140}
+              width={(6 / cols) * 142}
               className={styles.heart}
             />
             <div
