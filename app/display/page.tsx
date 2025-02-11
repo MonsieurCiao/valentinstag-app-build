@@ -1,7 +1,7 @@
 "use server";
+import Image from "next/image";
 import { prisma } from "../lib/db";
 import styles from "./page.module.css";
-import Link from "next/link";
 
 async function page() {
   const posts = await prisma.post.findMany();
@@ -28,7 +28,7 @@ async function page() {
               alignItems: "center",
             }}
           >
-            <img
+            <Image
               src={"/heartPink.svg"}
               alt={"heart"}
               width={(6 / cols) * 142}
