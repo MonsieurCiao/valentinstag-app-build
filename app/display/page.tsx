@@ -28,7 +28,7 @@ async function page() {
             }}
           >
             <img
-              src={"/img/heartPink.svg"}
+              src={"/heartPink.svg"}
               alt={"heart"}
               className={styles.heart}
             />
