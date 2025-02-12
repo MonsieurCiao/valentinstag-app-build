@@ -18,7 +18,7 @@ export default function Page() {
     const loadPosts = async () => {
       try {
         const data = await fetchPosts();
-        setPosts(data);
+        if (data != posts) setPosts(data); //check so that ui doesn't update unless it has to
       } catch (error) {
         console.error("Error fetching posts", error);
       }

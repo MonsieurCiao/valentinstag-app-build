@@ -22,7 +22,12 @@ async function page() {
           ))}
         </ul>
         <form className={styles.form} action={createPost}>
-          <input className={styles.input} type="number" name="number" />
+          <input
+            className={styles.input}
+            type="number"
+            pattern="[0-9]*,"
+            name="number"
+          />
           <button className={styles.submit} type="submit">
             add
           </button>
