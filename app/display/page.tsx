@@ -35,6 +35,10 @@ export default function Page() {
   }
   const cols = Math.ceil(Math.sqrt(posts.length));
 
+  const getAnimationDuration = (type: "heart" | "number") => {
+    if (type == "heart") return Math.random() * 5 + 5;
+  };
+
   return (
     <div className={styles.wrapper}>
       {/* <h1 className={styles.h1}>Valentinstag</h1> */}
@@ -60,14 +64,17 @@ export default function Page() {
             <Image
               src={"/heartPink.svg"}
               alt={"heart"}
+              id="heart"
               width={(6 / cols) * 142}
               height={(6 / cols) * 142}
+              style={{ animationDuration: `${getAnimationDuration("heart")}s` }}
               className={styles.heart}
             />
             <div
               className={styles.number}
               style={{
                 fontSize: `${(6 / cols) * 50}px`,
+                animationDuration: `${getAnimationDuration("number")}s`,
               }}
             >
               {post.number}

@@ -28,10 +28,12 @@
   100%{font-size: 50}
 }
 .heart{
-  animation: heart linear infinite 3s 
+  animation-name: heart;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .number{
-  animation: heart linear infinite 3s;
+  /* animation: heart linear infinite 3s; */
   position: absolute;
   top: 50
 }
