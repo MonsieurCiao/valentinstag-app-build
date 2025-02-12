@@ -25,7 +25,7 @@ async function page() {
           <input
             className={styles.input}
             type="number"
-            pattern="[0-9]*,"
+            pattern="[0-9]*"
             name="number"
           />
           <button className={styles.submit} type="submit">

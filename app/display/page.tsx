@@ -38,6 +38,13 @@ export default function Page() {
   const getAnimationDuration = (type: "heart" | "number") => {
     if (type == "heart") return Math.random() * 5 + 5;
   };
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -60,6 +67,7 @@ export default function Page() {
               justifyContent: "center",
               alignItems: "center",
             }}
+            onClick={toggleFullscreen}
           >
             <Image
               src={"/heartPink.svg"}
