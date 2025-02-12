@@ -11,7 +11,7 @@ async function fetchPosts() {
   return res.json();
 }
 
-export default function page() {
+export default function Page() {
   const [posts, setPosts] = useState<Post[]>();
 
   useEffect(() => {
